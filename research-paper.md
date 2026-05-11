@@ -1,6 +1,6 @@
 # Reducing Admin Burden with Practical AI
 
-**Status:** working draft. Sections 2, 3 and 4 have initial source-backed drafts. Other sections remain outline only.
+**Status:** working draft. Sections 2, 3, 4 and 5 have initial source-backed drafts. Other sections remain outline only.
 
 ## 1. Executive summary
 
@@ -403,16 +403,339 @@ This does not make the work slower. It makes the work survivable. A small, revie
 
 ## 5. Common small-business automation patterns
 
-Initial patterns to investigate:
+Small-business automation should start with the workflows that create repeated admin drag but do not carry high-stakes decision risk. The strongest early candidates are usually boring. That is a feature. Boring workflows are easier to map, safer to pilot, and more likely to create useful time savings without turning the business into a haunted spreadsheet with a chatbot glued to it.
 
-- Web form to structured lead register.
-- Email enquiry to triage queue.
-- Meeting notes to action list.
-- Invoice or quote request to draft response.
-- Customer feedback to theme summary.
-- Spreadsheet cleanup to weekly control report.
-- Event or job completion to follow-up sequence.
-- Simple KPI snapshot from operational records.
+This section focuses on patterns that are useful for owner-led and small teams with limited technical capacity. It assumes the organisation may be using email, spreadsheets, forms, accounting tools, calendars, messaging apps, lightweight CRM tools, or a mixture of all of them.
+
+### 5.1 Pattern selection rules
+
+A small-business automation pattern is a good candidate when it meets most of these conditions:
+
+- the workflow repeats often;
+- the desired output is clear;
+- the workflow has a named owner;
+- the data involved is low or manageable risk;
+- errors are easy to spot and correct;
+- the first version can run in draft or review mode;
+- the business can stop the pilot without breaking operations;
+- success can be measured in time, rework, speed, quality or confidence.
+
+A pattern is a poor candidate when it involves high-stakes judgement, sensitive data without controls, unclear ownership, unstable processes, or decisions that affect rights, care, access, employment, finance or safety.
+
+### 5.2 Enquiry to structured lead register
+
+**Problem addressed:** capture drag.
+
+Many small businesses receive enquiries through multiple channels: website forms, email, phone calls, social media, WhatsApp, referrals and in-person conversations. The admin burden appears later when the owner has to remember who asked what, whether they replied, what was quoted, and what needs follow-up.
+
+A practical first intervention is to create one structured enquiry register.
+
+**AI role:**
+
+- summarise free-text enquiries;
+- suggest enquiry type;
+- identify missing information;
+- draft a short internal note.
+
+**Automation role:**
+
+- create a row or record when a form is submitted;
+- notify the owner or team;
+- create a follow-up task;
+- send a basic acknowledgement where appropriate.
+
+**Human review point:**
+
+The owner or responsible person checks the category, missing fields and next action before relying on the record.
+
+**First pilot version:**
+
+Start with one channel, preferably the website form or a shared inbox. Do not attempt to connect every source at once. The first test is whether a structured record reduces chasing and lost enquiries.
+
+**Main risks:**
+
+- misclassification;
+- missing important context;
+- storing sensitive information casually;
+- automating replies that should be personalised.
+
+### 5.3 Email enquiry to triage queue
+
+**Problem addressed:** capture drag and handoff drag.
+
+Shared inboxes often become informal work queues. The business knows the work is in there somewhere, which is reassuring in the same way knowing the keys are somewhere in the house is reassuring.
+
+A triage queue turns incoming email into visible work.
+
+**AI role:**
+
+- summarise the email;
+- suggest urgency or category;
+- identify whether information is missing;
+- draft a response for review.
+
+**Automation role:**
+
+- move emails with defined labels into a queue;
+- create tasks from emails;
+- set reminders;
+- track status such as new, waiting, quoted, booked, closed.
+
+**Human review point:**
+
+A person confirms category, priority and response before anything is sent externally.
+
+**First pilot version:**
+
+Use labels and a simple spreadsheet or task board. Start with categories such as new enquiry, quote request, support issue, booking request and supplier/admin.
+
+**Main risks:**
+
+- wrong urgency;
+- customer-facing draft sent without review;
+- sensitive content processed in the wrong tool;
+- queue grows without ownership.
+
+### 5.4 Meeting notes to action list
+
+**Problem addressed:** handoff drag.
+
+Small teams often make decisions in conversations, then lose the actions inside notes, chat threads or memory. AI can help extract actions, but it should not invent ownership or silently decide what matters.
+
+**AI role:**
+
+- summarise meeting notes;
+- extract actions;
+- identify owners and dates where stated;
+- highlight unresolved questions.
+
+**Automation role:**
+
+- create tasks in a shared list;
+- add due dates;
+- notify owners;
+- compile a weekly action summary.
+
+**Human review point:**
+
+Meeting owner confirms the action list before tasks are treated as agreed.
+
+**First pilot version:**
+
+Use one recurring meeting. Compare action follow-through before and after the pilot.
+
+**Main risks:**
+
+- invented actions;
+- wrong owner assignment;
+- private or sensitive meeting content being processed inappropriately;
+- action lists getting longer without prioritisation.
+
+### 5.5 Quote or invoice request to draft response
+
+**Problem addressed:** capture drag and handoff drag.
+
+Many businesses answer similar quote, invoice or payment-status queries repeatedly. AI can help draft responses, but pricing, commitments and contractual wording need human control.
+
+**AI role:**
+
+- draft a reply from a template;
+- summarise the request;
+- identify missing details;
+- suggest which standard response fits.
+
+**Automation role:**
+
+- create a draft email;
+- attach or link relevant documents;
+- create a follow-up reminder;
+- update enquiry status after review.
+
+**Human review point:**
+
+A responsible person checks price, promise, recipient, attachments and wording before sending.
+
+**First pilot version:**
+
+Start with draft-only responses for one common request type, such as asking for missing quote details.
+
+**Main risks:**
+
+- wrong price or terms;
+- accidental promise;
+- sending confidential information to the wrong person;
+- tone that damages trust.
+
+### 5.6 Customer feedback to theme summary
+
+**Problem addressed:** decision drag.
+
+Feedback is often collected but not used because it is scattered across forms, reviews, emails, conversations and support messages. AI can help cluster themes, but the organisation should avoid treating theme summaries as objective truth without sampling the source material.
+
+**AI role:**
+
+- summarise feedback;
+- cluster themes;
+- identify recurring complaints or praise;
+- extract example quotes for review.
+
+**Automation role:**
+
+- collect feedback into one place;
+- tag feedback by source, date and theme;
+- produce a monthly summary;
+- flag urgent issues.
+
+**Human review point:**
+
+A person checks sampled source feedback before decisions are made from the summary.
+
+**First pilot version:**
+
+Run a monthly summary from one feedback channel. Use it to identify one improvement action.
+
+**Main risks:**
+
+- over-weighting a small sample;
+- missing minority or high-severity issues;
+- summarising feedback in a way that removes context;
+- acting on noisy data.
+
+### 5.7 Spreadsheet cleanup to weekly control report
+
+**Problem addressed:** decision drag and assurance drag.
+
+Spreadsheets often become the operating system of small businesses. That is not automatically bad. The problem is when the spreadsheet becomes inconsistent, undocumented and impossible to trust.
+
+A weekly control report turns messy operational data into a small set of useful checks.
+
+**AI role:**
+
+- suggest column definitions;
+- identify inconsistent labels;
+- draft notes explaining anomalies;
+- summarise changes since the last review.
+
+**Automation role:**
+
+- refresh a report;
+- flag missing fields;
+- identify overdue items;
+- produce a weekly snapshot.
+
+**Human review point:**
+
+The owner checks source data, definitions and flagged exceptions before using the report.
+
+**First pilot version:**
+
+Pick one spreadsheet and produce a weekly report with no more than five measures. More metrics are not automatically more control. Sometimes they are just a fog machine with borders.
+
+**Main risks:**
+
+- poor source data;
+- inconsistent definitions;
+- false confidence from tidy charts;
+- decisions made from unvalidated summaries.
+
+### 5.8 Event or job completion to follow-up sequence
+
+**Problem addressed:** handoff drag and capture drag.
+
+Many small businesses lose value after delivery because follow-up is manual: asking for feedback, requesting reviews, sending aftercare information, issuing invoices, checking satisfaction, or prompting repeat work.
+
+**AI role:**
+
+- draft follow-up messages;
+- personalise messages from approved fields;
+- summarise job notes into aftercare information;
+- suggest next-step wording.
+
+**Automation role:**
+
+- trigger follow-up after a job or event is marked complete;
+- create reminders;
+- send review requests after approval;
+- update customer status.
+
+**Human review point:**
+
+The responsible person approves wording and recipient rules before messages go out. Sensitive or unusual cases should be excluded.
+
+**First pilot version:**
+
+Use one completion trigger and one follow-up message. Keep it manual-send or approval-based until quality is proven.
+
+**Main risks:**
+
+- inappropriate timing;
+- wrong recipient;
+- insensitive message after a poor experience;
+- over-automation that makes the business feel less human.
+
+### 5.9 Simple KPI snapshot from operational records
+
+**Problem addressed:** decision drag.
+
+A small business does not always need a full dashboard. Often it needs a weekly snapshot that answers: what came in, what was completed, what is stuck, what is overdue, and what needs attention.
+
+**AI role:**
+
+- draft a plain-English summary;
+- highlight changes or exceptions;
+- suggest questions for review;
+- explain likely drivers, clearly marked as hypotheses.
+
+**Automation role:**
+
+- refresh measures from a spreadsheet, CRM or accounting export;
+- send a weekly summary;
+- flag overdue or missing items;
+- archive previous snapshots.
+
+**Human review point:**
+
+The owner checks the numbers and context before acting.
+
+**First pilot version:**
+
+Start with a weekly email or one-page report. Limit it to five to seven measures.
+
+**Main risks:**
+
+- measuring what is easy rather than what matters;
+- untrusted source data;
+- AI commentary presenting guesses as facts;
+- dashboard bloat.
+
+### 5.10 Pattern priority matrix
+
+| Pattern | Main drag addressed | First-pilot difficulty | Typical risk | Good first candidate? |
+|---|---|---:|---|---|
+| Enquiry to structured lead register | Capture | Low | Misclassification | Yes |
+| Email enquiry to triage queue | Capture / handoff | Low-medium | Wrong priority or owner | Yes |
+| Meeting notes to action list | Handoff | Low | Invented actions | Yes |
+| Quote/invoice request to draft response | Capture / handoff | Medium | Wrong commitment | Yes, draft-only |
+| Customer feedback to theme summary | Decision | Low-medium | Overgeneralisation | Yes, with sampling |
+| Spreadsheet cleanup to weekly report | Decision / assurance | Medium | False confidence | Yes, if definitions are clear |
+| Job completion to follow-up sequence | Handoff | Medium | Poor timing or tone | Yes, approval-first |
+| Simple KPI snapshot | Decision | Medium | Bad source data | Yes, if source is trusted |
+
+### 5.11 The best first pattern for most small businesses
+
+For most small businesses, the best first automation is not a chatbot. It is usually one of these:
+
+1. enquiry to structured register;
+2. meeting notes to action list;
+3. spreadsheet to weekly control report.
+
+These patterns are useful because they expose work, reduce memory load, and create a foundation for later automation. They also avoid the most dangerous first-step mistake: using AI directly on customer-facing or high-stakes decisions before the business understands its workflow.
+
+The recommended first move is:
+
+> Map one repeated workflow, create a simple register or task queue, add one assistive AI step, and keep human review visible.
+
+That is not glamorous. It is how useful systems survive contact with Monday morning.
 
 ## 6. AI governance for non-technical teams
 
