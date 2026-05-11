@@ -1,6 +1,6 @@
 # Reducing Admin Burden with Practical AI
 
-**Status:** working draft. Sections 2 and 3 have initial source-backed drafts. Other sections remain outline only.
+**Status:** working draft. Sections 2, 3 and 4 have initial source-backed drafts. Other sections remain outline only.
 
 ## 1. Executive summary
 
@@ -257,13 +257,149 @@ If the answer is no, the organisation is not ready to automate that workflow yet
 
 ## 4. Where AI should not be used unchecked
 
-High-risk areas include:
+The strongest case for practical AI adoption is not that AI can be used everywhere. It is that organisations can identify a limited set of workflows where AI can help without weakening accountability, safety, privacy or trust.
 
-- Clinical, legal, financial, regulatory, disciplinary, or safety-critical judgement.
-- Sensitive personal data without clear controls.
-- Decisions affecting access, eligibility, care, pay, employment, or legal status.
-- Processes where an error is hard to detect or reverse.
-- Workflows where accountability becomes unclear.
+Unchecked AI is risky when the system is allowed to produce, route, approve, reject or act on information without a clear human review point. In this paper, unchecked means one or more of the following:
+
+- no named owner for the workflow;
+- no human review before the output affects someone;
+- no record of source material or assumptions;
+- no clear route for correction or appeal;
+- no data protection or security assessment;
+- no way to detect whether the output is wrong;
+- no stop condition for the pilot.
+
+The NIST AI RMF, UK AI Playbook, ICO risk toolkit, OECD AI Principles and NCSC secure AI guidance all point toward the same broad conclusion: risk, accountability, security, rights, transparency and human control must be designed into AI use, not bolted on after something goes wrong. See SRC-001, SRC-003, SRC-006, SRC-007 and SRC-012.
+
+### 4.1 High-stakes decisions
+
+AI should not be used unchecked where outputs affect a person's rights, access, care, employment, money, safety or legal position.
+
+Examples include:
+
+- clinical, medical or veterinary judgement;
+- legal interpretation or legal advice;
+- financial decisions, credit, payments, eligibility or pricing decisions;
+- employment, disciplinary or performance decisions;
+- safeguarding, housing, benefits, enforcement or access-to-service decisions;
+- safety-critical operational decisions;
+- decisions involving vulnerable people.
+
+In these contexts, AI may still have a role, but that role should be bounded. It may assist with summarising source material, preparing a draft, extracting facts, or identifying missing information. It should not quietly become the decision-maker.
+
+A safer pattern is:
+
+> AI prepares context -> qualified human reviews -> accountable human or organisation decides.
+
+### 4.2 Sensitive, personal or confidential data
+
+AI should not be used unchecked where the workflow involves sensitive personal data, confidential business information, health information, client records, staff records, financial details, or commercially sensitive material.
+
+This is not an argument against all AI use with sensitive data. It is an argument against casual use. Before piloting, the organisation should understand:
+
+- what data is being processed;
+- where the data goes;
+- who can access it;
+- whether the tool provider uses the data for training or service improvement;
+- how long the data is retained;
+- whether the use complies with relevant privacy, security and contractual requirements;
+- whether people need to be informed;
+- whether a formal data protection assessment is needed.
+
+For small organisations, this is a common failure point. The workflow looks simple, but the data is not. Copying sensitive information into an AI tool because it saves five minutes is not innovation. It is admin debt with a privacy invoice attached.
+
+### 4.3 Workflows where errors are hard to detect
+
+Some AI-assisted outputs are easy to check. Others are not.
+
+Lower-risk examples:
+
+- draft email wording where the sender can read it;
+- meeting action extraction where attendees can confirm it;
+- structured intake fields where missing data is visible;
+- a source summary where the original source is available.
+
+Higher-risk examples:
+
+- complex policy interpretation;
+- summarising long source material no one reviews;
+- classifying cases where misclassification is hard to spot;
+- producing calculations without formula transparency;
+- generating advice from mixed or ambiguous sources;
+- creating reports that managers will trust without checking.
+
+If a user cannot realistically tell whether the output is wrong, the workflow is not a good candidate for unchecked AI. It may still be a candidate for AI-assisted drafting with specialist review, better source linking, sampling, or quality-control checks.
+
+### 4.4 Workflows with unclear ownership
+
+AI should not be inserted into workflows that nobody owns.
+
+Unclear ownership creates risk because no one is accountable for:
+
+- defining the intended output;
+- checking data quality;
+- reviewing the AI output;
+- correcting errors;
+- deciding whether the pilot should continue;
+- explaining the workflow to affected people;
+- maintaining the automation after the first enthusiastic week.
+
+This is especially relevant for non-technical teams, where AI use may begin informally inside individual tools. If the workflow matters, it needs an owner. If no one can own it, it should not be automated yet.
+
+### 4.5 Workflows where automation hides the problem
+
+AI can reduce visible friction while making the underlying process worse.
+
+Examples:
+
+- drafting faster replies to enquiries that should have been captured in a better form;
+- summarising messy records instead of fixing the record structure;
+- creating dashboard commentary from unreliable source data;
+- sending automated reminders because ownership is unclear;
+- generating polished reports from categories no one has defined consistently.
+
+This is the automation version of painting over damp. It looks better briefly, then the wall starts doing biology.
+
+The safer approach is to ask:
+
+1. Is the workflow itself clear?
+2. Is the data good enough?
+3. Is the owner named?
+4. Is the human review point explicit?
+5. Is the output actually useful?
+6. Is the risk acceptable?
+
+If the answer is no, simplify first.
+
+### 4.6 Red-flag checklist
+
+Do not proceed with unchecked AI if any of the following are true.
+
+| Red flag | Why it matters | Safer response |
+|---|---|---|
+| No named owner | Accountability is unclear | Assign owner before pilot |
+| Sensitive data involved | Privacy/security risk | Complete data review first |
+| High-stakes outcome | Harm may be significant | Require qualified human decision |
+| Output hard to verify | Errors may go unnoticed | Add source links, sampling or expert review |
+| No correction route | People cannot challenge errors | Create correction/appeal route |
+| Weak source data | Automation may amplify bad data | Fix capture/data quality first |
+| No review log | Assurance is weak | Add human review log |
+| Autonomous external action | Mistakes affect customers/users | Start with draft-only mode |
+| Process owner wants magic | Expectations are unrealistic | Map workflow and constraints first |
+
+### 4.7 Default safety posture for first pilots
+
+For first pilots in non-technical organisations, the default posture should be:
+
+- **draft, do not send automatically**;
+- **suggest, do not decide**;
+- **summarise, but link to source**;
+- **classify, but allow correction**;
+- **flag exceptions, but do not act on them alone**;
+- **record review, not just output**;
+- **pilot small, then decide whether to scale**.
+
+This does not make the work slower. It makes the work survivable. A small, reviewable AI pilot that earns trust is more useful than an ambitious automation that fails quietly until someone has to excavate the mess with a teaspoon.
 
 ## 5. Common small-business automation patterns
 
